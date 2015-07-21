@@ -1,0 +1,21 @@
+{
+  "name": "p5js-sketchbook",
+  "version": "0.1.0",
+  "description": "A server for p5js projects",
+  "main": "p5.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "p5js",
+    "processing",
+    "creative",
+    "code"
+  ],
+  "author": "Randolph Jones",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "ejs": "~2.3.3",
+    "express": "~4.13.1"
+  }
+}
