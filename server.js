@@ -1,18 +1,30 @@
 var LOCAL_PORT = 3000;
 
 var express = require('express');
-var exp = express();
+var app = express();
+var fs = require('fs');
+var config = require('./config.js');
+var indexData = {config: config};
 
-//dependencies for a future build out
-//exp.set('view engine', 'ejs');
-//exp.engine('html', require('ejs').renderFile);
+app.set('view engine', 'ejs');
+app.engine('html', require('ejs').renderFile);
+app.set('view options', {layout:'layout.ejs'});
 
-exp.use(express.static('./sketchbook'));
+app.use(express.static('./sketchbook'));
 //set up the server to vend the content
-exp.get('/', function(req, res){
-	//res.render('main');
-	res.send('Access your processing sketchbook from it\s associated directory');
+app.get('/', function(req, res){
+	//generate a list of sketches
+	fs.readdir('./sketchbook', function(err, directories){
+		indexData.sketches = []; 
+		for(d in directories){
+			var pri = indexData.config.privateFolders;
+			if(pri.indexOf(directories[d]) < 0){
+				indexData.sketches.push(directories[d]);
+			}
+		}
+		res.render('main', indexData);
+	});
 });
 
-exp.listen(LOCAL_PORT);
+app.listen(LOCAL_PORT);
 console.log('Serving sketchbook at port ' + LOCAL_PORT)	

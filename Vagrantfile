@@ -20,8 +20,7 @@ Vagrant.configure(2) do |config|
 
   config.vm.provision "shell", run: "always", inline: <<-SHELL
     cd /vagrant
-    forever --uid "server" -a start server.js
-    # node /vagrant/server
-    echo server started
+    # forever --uid "server" -a start server.js
+    # echo server started
   SHELL
 end

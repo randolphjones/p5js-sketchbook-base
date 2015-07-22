@@ -1,0 +1,19 @@
+<% include header %>
+	<header>
+		<h1><%= config.title %></h1>
+	</header>
+	<div class="container-fluid">
+		<div class="row">
+			<% for(s in sketches){ %>
+				<a href="/<%= sketches[s] %>">
+					<div class="col-md-2 col-sm-6 col-xs-6" style="text-align: center">
+						<img src="/<%= sketches[s] %>/icon.png" style="width: 100%; height: auto;">
+						<div>
+							<%= sketches[s] %>
+						</div>
+					</div>
+				</a>
+			<% } %>
+		</div>
+	</div>
+<% include footer %>
