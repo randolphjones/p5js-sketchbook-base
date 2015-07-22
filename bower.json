@@ -20,6 +20,7 @@
     "tests"
   ],
   "dependencies": {
-    "p5js": "~0.4.7"
+    "p5js": "~0.4.7",
+    "bootstrap": "~3.3.5"
   }
 }
