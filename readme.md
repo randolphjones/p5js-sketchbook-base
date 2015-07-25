@@ -10,12 +10,14 @@ $ vagrant up
 ```
 If this is your first time then vagrant should download the machine image, the dependencies, and when it's finished, it will launch the sketch server.
 
-----
+
+---
 **To create a new sketch** type 
 ```
 $ ./new-sketch.sh
 ```
 You'll be prompted to name your new sketch and then you'll find a new base folder ready for development.
+
 
 ---
 **To access your sketch** from your browser, navigate to 
@@ -23,6 +25,7 @@ You'll be prompted to name your new sketch and then you'll find a new base folde
 http://localhost:3000/[the name of your sketch]
 ```
 This should show the latest state of your sketch. Reloading your browser should show your updates sketch.
+
 
 ---
 **To load a browsable layout** of your entire sketch collecton in your browser, navigate to
