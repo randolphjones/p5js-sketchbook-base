@@ -21,6 +21,10 @@ To access your sketch you just need to navigate to
 ```
 http://localhost:3000/[the name of your sketch]
 ```
-
 This should show the latest state of your sketch. Reloading your browser should show your updates sketch.
+
+To load a navigatable layout of your entire sketch collecton, just navigate to
+```
+http://localhost:3000
+```
 
